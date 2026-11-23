@@ -12,4 +12,4 @@ RUN pip install -q "huggingface_hub[hf_transfer]" ninja psutil packaging \
  && grep -vE 'libsndfile1|tritonserverclient' LongCat-Video/requirements_avatar.txt > /tmp/req.txt \
  && pip install -q -r /tmp/req.txt
 COPY patch_audio_cfg.py /root/patch_audio_cfg.py
-RUN python /root/patch_audio_cfg.py /root/w/LongCat-Video && python -c "import flash_attn,transformers,librosa,audio_separator"
+RUN pip install -q hf_transfer && python /root/patch_audio_cfg.py /root/w/LongCat-Video && python -c "import hf_transfer,flash_attn,transformers,librosa,audio_separator"
