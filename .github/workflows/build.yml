@@ -1,5 +1,5 @@
 name: build
-on: { push: { branches: [main], paths-ignore: ["remotion/**", ".github/workflows/remotion.yml"] }, workflow_dispatch: {} }
+on: { push: { branches: [main], paths-ignore: ["remotion/**", ".github/workflows/remotion.yml", "infinitetalk/**", ".github/workflows/infinitetalk.yml"] }, workflow_dispatch: {} }
 permissions: { contents: read, packages: write }
 jobs:
   build:
